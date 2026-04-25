@@ -46,13 +46,3 @@ tiempo_generador = fin - inicio
 print("GENERADOR")
 print(f"Total: {total_generador:.2f} kg")
 print(f"Tiempo: {tiempo_generador:.6f} segundos\n")
-
-# Medición de memoria para las respuestas (opcional para justificar)
-memoria_lista = sys.getsizeof(lista_comprension)
-memoria_generador = sys.getsizeof((calcular_con_incremento(p) for p in datos_fincas))
-
-print("-" * 30)
-print("RESPUESTAS A LAS PREGUNTAS:")
-print(f"1. ¿Qué método ha sido más rápido?: Generalmente la List Comprehension es la más rápida por su optimización interna en C.")
-print(f"2. ¿Cuál ocupa más memoria?: Las listas (Tradicional y Comprensión) ocupan mucha más memoria ({memoria_lista} bytes).")
-print(f"3. ¿Por qué?: Los generadores no guardan todos los datos en memoria, los procesan uno a uno (Lazy Evaluation), ocupando solo {memoria_generador} bytes.")
